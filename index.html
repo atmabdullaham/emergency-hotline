@@ -4,15 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emergency Hotline</title>
-    <!-- daisyui cdn -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-    <!-- tailwind cdn -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- font awesome -->
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        hind: ["Hind Madurai", "sans-serif"], 
+                        inter: ["Inter", "sans-serif"],
+                        roboto: ["Roboto", "sans-serif"],
+                    },
+                },
+            },
+        }
+    </script>
+
+    <!-- DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css" rel="stylesheet" type="text/css" />
+
+    <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/4824937cff.js" crossorigin="anonymous"></script>
 </head>
+
 <body class="">
-    <header class="w-11/12 mx-auto ">
+    <header class="w-11/12 mx-auto font-hind">
        <nav class="flex items-center justify-between py-7">
         <button class="btn bg-transparent hover:bg-transparent border-0 hover:border-0 text-start hover:shadow-none pl-0"><img src="./assets/logo.png" class="w-8 md:w-14 pr-1 md:pr-2" alt="">
             <span class="text-emerald-800 text-sm md:text-xl font-medium md:font-extrabold ">Emergency <br> Service</span>
@@ -27,24 +58,24 @@
                 <span id="balance" >100</span><img src="./assets/coin.png" class="w-4 md:w-6" alt="">
             </div>
             <!-- copy -->
-            <div class="flex items-center bg-green-400 px-3 md:px-7 py-1 md:py-3 rounded-full gap-1 md:gap-2  text-sm md:text-lg font-medium text-white">
+            <div class="flex items-center bg-[#00A63E] px-3 md:px-7 py-1 md:py-3 rounded-full gap-1 md:gap-2  text-sm md:text-lg font-medium text-white">
                 <span id="copy-counter">0</span> <span>Copy</span>
             </div>
         </div>
        </nav>
     </header>
     <!-- main -->
-     <main class="bg-green-50 min-h-screen">
+     <main class="bg-green-50 min-h-screen font-www">
         <!-- hero section starts -->
-         <section id="hero" class="bg-gradient-to-r from-[#013122] via-[#006747] to-[#013223] flex flex-col justify-center items-center py-5 text-gray-200 gap-2 text-center">
+         <section id="hero" class="bg-gradient-to-r from-[#013122] via-[#006747] to-[#013223] flex flex-col justify-center items-center py-5 text-gray-200 gap-2 text-center font-hind">
             <img src="./assets/logo-dark.png" class="w-24" alt="">
-            <h2 class="text-4xl font-bold">Emergency Service Directory</h2>
-            <p class="text-xl font-semibold w-11/12">Government Emergency Services at Your Fingertip – A Project by Government of the People’s Republic of Bangladesh</p>
+            <h2 class="text-2xl md:text-4xl font-bold">Emergency Service Directory</h2>
+            <p class="text-sm md:text-xl font-semibold w-11/12">Government Emergency Services at Your Fingertip – A Project by Government of the People’s Republic of Bangladesh</p>
          </section>
          <!-- main container-->
           <section class="w-11/12 mx-auto py-10 flex flex-col-reverse md:grid grid-cols-12 gap-3">
             <!-- Card Section -->
-             <div class="col-span-9 grid grid-cols-1 md:grid-cols-3 gap-3">
+             <div class="col-span-9 grid grid-cols-1 md:grid-cols-3 gap-3 font-hind">
 
                 <!-- card 1 -->
                 <!-- National Emergency Service -->
@@ -135,7 +166,7 @@
                         <h2 class="text-xl font-bold service-name">
                             Electricity Emergency (DESCO)
                         </h2>
-                        <p class="text-lg font-normal text-gray-500">Electricity supply complaints, outage reporting, and technical help.</p>
+                        <p class="text-lg font-normal text-gray-500">Electricity complaints help.</p>
                         <h2 class="text-3xl font-bold number">16162</h2>
                         <span class="bg-gray-100 w-fit px-4 py-2 rounded-full">Power</span>
                         <div class="flex justify-between gap-2 mt-2">
@@ -206,14 +237,14 @@
                 
              </div>
              <!-- History Section -->
-              <div class="col-span-3 bg-base-100 shadow-sm rounded-md p-4">
+              <div class="col-span-3 bg-base-100 shadow-sm rounded-md p-4 font-roboto">
                 <div class="flex justify-between items-center">
                     <div class="flex items-center gap-2 justify-start"><i class="fa-regular fa-clock fa-lg"></i>
                     <h2 class="text-xl font-medium">Call History</h2></div>
                     <button class="bg-[#00A63E]  text-lg font-semibold py-3 px-8 text-white rounded-full" id="clear">Clear</button>
                 </div>
                 <!-- history container-->
-                 <div class="space-y-2 my-4" id="history">
+                 <div class="space-y-2 my-4 font-inter" id="history">
                    
 
                  </div>
