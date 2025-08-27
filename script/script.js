@@ -1,15 +1,17 @@
 
 
+function increaseBy1(id){
+        const counter = document.getElementById(id);
+        let count = parseInt(counter.innerText);
+        count += 1;
+        counter.innerText = count;
+}
+
 // heart count
 const hearts =  document.getElementsByClassName("heart");
 for(heart of hearts){
-    heart.addEventListener("click", function(){
-        const heartCounter = document.getElementById("heart-counter");
-        console.log(heartCounter.innerText);
-        let count = parseInt(heartCounter.innerText);
-        console.log(count);
-        count += 1;
-        heartCounter.innerText = count; 
+        heart.addEventListener("click", function(){
+        increaseBy1("heart-counter")
     })
 }
 
@@ -18,15 +20,11 @@ const copys = document.getElementsByClassName("copy");
 for(copy of copys){
     copy.addEventListener("click", function(e){
     const parent = e.target.parentElement.parentElement;
-    const title = parent.querySelector(".card-title").innerText;
+    const title = parent.querySelector(".service-name").innerText;
     const number = parent.querySelector(".number").innerText;
     navigator.clipboard.writeText(number)
-    alert(`You clickd on ${title}`)
-    console.log(parent);
-    const copyCounter = document.getElementById("copy-counter");
-    let count = parseInt(copyCounter.innerText);
-    count += 1;
-    copyCounter.innerText = count;
+    alert(`You just copy the number`)
+    increaseBy1("copy-counter")
     })
 }
 
